@@ -38,6 +38,7 @@ module ::WatchCategory
       'infolit' => [['interest-groups', 'information-literacy']],
       'pedagogy' => [['interest-groups', 'pedagogy']],
       'amical-2019' => [['interest-groups', 'amical-2019']],
+      'amical-2020' => [['interest-groups', 'amical-2020']],
       'open-source-library-systems' => [['interest-groups', 'open-source-library-systems']],
       'digital-literacy' => [['interest-groups', 'digital-literacy']],
       'coordinating-cmte' => ['announcements'],
