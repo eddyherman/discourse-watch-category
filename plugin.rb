@@ -37,6 +37,7 @@ module ::WatchCategory
     groups_cats = {
       'infolit' => [['interest-groups', 'information-literacy']],
       'pedagogy' => [['interest-groups', 'pedagogy']],
+      'teaching-writing' => [['interest-groups', 'teaching-writing']],
       'amical-2019' => [['interest-groups', 'amical-2019']],
       'amical-2020' => [['interest-groups', 'amical-2020']],
       'open-source-library-systems' => [['interest-groups', 'open-source-library-systems']],
