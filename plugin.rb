@@ -30,7 +30,6 @@ module ::WatchCategory
       'dhsi-2018-cohort' => [['private', 'dhsi-2018-cohort']],
       'dhi-b-2019-cohort' => [['private', 'dhi-b-2019-cohort']],
       'chairs' => [['private', 'chairs']],
-      'representatives' => [['private', 'members-council']],
       'facdevcenters' => [['private', 'facdevcenters']]
     }
     WatchCategory.change_notification_pref_for_group(groups_cats, :watching)
@@ -44,7 +43,7 @@ module ::WatchCategory
       'open-source-library-systems' => [['interest-groups', 'open-source-library-systems']],
       'digital-literacy' => [['interest-groups', 'digital-literacy']],
       'coordinating-cmte' => ['announcements'],
-      'representatives' => ['announcements'],
+      'representatives' => ['announcements', ['private', 'members-council'] ],
       'lib-buyers' => [['private', 'buyers-group']]
     }
     WatchCategory.change_notification_pref_for_group(groups_cats, :watching_first_post)
