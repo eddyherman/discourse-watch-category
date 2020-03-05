@@ -30,6 +30,7 @@ module ::WatchCategory
       'dhsi-2018-cohort' => [['private', 'dhsi-2018-cohort']],
       'dhi-b-2019-cohort' => [['private', 'dhi-b-2019-cohort']],
       'chairs' => [['private', 'chairs']],
+      'representatives' => [['private', 'members-council']],
       'facdevcenters' => [['private', 'facdevcenters']]
     }
     WatchCategory.change_notification_pref_for_group(groups_cats, :watching)
