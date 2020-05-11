@@ -10,7 +10,7 @@ module ::WatchCategory
     groups_cats = {
       # 'group' => ['category', 'another-top-level-category', ['parent-category', 'sub-category']],
       # 'everyone' makes every user watch the listed categories
-       'everyone' => ['integrations'],
+      # 'everyone' => ['integrations']
        'cyber-technologist' => ['AGE']
 #      'digcol-cmte' => [['private', 'digital-collections-committee']]
     }
