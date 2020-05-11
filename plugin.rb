@@ -11,42 +11,14 @@ module ::WatchCategory
       # 'group' => ['category', 'another-top-level-category', ['parent-category', 'sub-category']],
       # 'everyone' makes every user watch the listed categories
       # 'everyone' => ['announcements']
-      'coordinating-cmte' => [['private', 'coordinating-committee']],
-      'digcol-cmte' => [['private', 'digital-collections-committee']],
-      'digped-cmte' => [['private', 'digital-pedagogy-committee']],
-      'digschol-cmte' => [['private', 'digital-scholarship-committee']],
-      'eresources-cmte' => [['private', 'e-resources-committee'], ['private', 'buyers-group']],
-      'infolit-cmte' => [['private', 'information-literacy-committee']],
-      'inst-research-cmte' => [['private', 'institutional-research-assessment-committee']],
-      'oclc-cmte' => [['private', 'oclc-programs-committee']],
-      'profdev-cmte' => [['private', 'professional-development-committee']],
-      'grant-review-cmte' => [['private', 'grant-review-cmte']],
-      'amical-2018-joint-org' => [['private', 'amical-2018-joint-org']],
-      'amical-2018-program-cmte' => [['private', 'amical-2018-program-cmte']],
-      'amical-2019-joint-org' => [['private', 'amical-2019-joint-org']],
-      'amical-2019-program-cmte' => [['private', 'amical-2019-program-cmte']],
-      'amical-2020-joint-org' => [['private', 'amical-2020-joint-org']],
-      'amical-2020-program-org' => [['private', 'amical-2020-program-org']],
-      'dhsi-2018-cohort' => [['private', 'dhsi-2018-cohort']],
-      'dhi-b-2019-cohort' => [['private', 'dhi-b-2019-cohort']],
-      'chairs' => [['private', 'chairs']],
-      'representatives' => [['private', 'members-council']],
-      'cc-officers' => [['private', 'members-council']],
-      'facdevcenters' => [['private', 'facdevcenters']]
+      'cyber-technologist' => [['eis-agn']],
+      'digcol-cmte' => [['private', 'digital-collections-committee']]
     }
     WatchCategory.change_notification_pref_for_group(groups_cats, :watching)
 
     groups_cats = {
       'infolit' => [['interest-groups', 'information-literacy']],
-      'pedagogy' => [['interest-groups', 'pedagogy']],
-      'teaching-writing' => [['interest-groups', 'teaching-writing']],
-      'amical-2019' => [['interest-groups', 'amical-2019']],
-      'amical-2020' => [['interest-groups', 'amical-2020']],
-      'open-source-library-systems' => [['interest-groups', 'open-source-library-systems']],
-      'digital-literacy' => [['interest-groups', 'digital-literacy']],
-      'coordinating-cmte' => ['announcements'],
-      'representatives' => ['announcements'],
-      'lib-buyers' => [['private', 'buyers-group']]
+      'pedagogy' => [['interest-groups', 'pedagogy']]
     }
     WatchCategory.change_notification_pref_for_group(groups_cats, :watching_first_post)
   end
