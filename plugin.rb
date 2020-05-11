@@ -17,9 +17,15 @@ module ::WatchCategory
     WatchCategory.change_notification_pref_for_group(groups_cats, :watching)
 
     groups_cats = {
-      'cyber-technologist' => [internal-processes],
+      'cyber-technologist' => ['internal-processes','integrations','networking-deployments']
     }
     WatchCategory.change_notification_pref_for_group(groups_cats, :watching_first_post)
+    
+    group_cats = {
+      'cyber-technologist' => ['eis-agn']
+    }
+    WatchCategory.change_notification_pref_for_group(groups_cats, :tracking)
+    
   end
 
   def self.change_notification_pref_for_group(groups_cats, pref)
