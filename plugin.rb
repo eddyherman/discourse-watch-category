@@ -11,14 +11,13 @@ module ::WatchCategory
       # 'group' => ['category', 'another-top-level-category', ['parent-category', 'sub-category']],
       # 'everyone' makes every user watch the listed categories
       # 'everyone' => ['announcements']
-      'cyber-technologist' => [['AGE']]
+      'cyber-technologist' => ['AGE']
 #      'digcol-cmte' => [['private', 'digital-collections-committee']]
     }
     WatchCategory.change_notification_pref_for_group(groups_cats, :watching)
 
   #  groups_cats = {
   #    'infolit' => [['interest-groups', 'information-literacy']],
-  #    'pedagogy' => [['interest-groups', 'pedagogy']]
 #    }
 #    WatchCategory.change_notification_pref_for_group(groups_cats, :watching_first_post)
   end
