@@ -11,7 +11,7 @@ module ::WatchCategory
       # 'group' => ['category', 'another-top-level-category', ['parent-category', 'sub-category']],
       # 'everyone' makes every user watch the listed categories
       # 'everyone' => ['announcements']
-      'cyber-technologist' => ['AGE']
+      'watch-gt' => ['gt-archive']
 #      'digcol-cmte' => [['private', 'digital-collections-committee']]
     }
     WatchCategory.change_notification_pref_for_group(groups_cats, :watching)
