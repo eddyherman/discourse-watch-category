@@ -10,27 +10,22 @@ module ::WatchCategory
     groups_cats = {
       # 'group' => ['category', 'another-top-level-category', ['parent-category', 'sub-category']],
       # 'everyone' makes every user watch the listed categories
-<<<<<<< HEAD
       # 'everyone' => ['announcements']
       'watch-gt' => ['gt-archive']
-=======
-      # 'everyone' => ['integrations']
-       'cyber-technologist' => ['AGE']
->>>>>>> 263ce565ebab71c9b0bbcdf74057795ad0c2422c
 #      'digcol-cmte' => [['private', 'digital-collections-committee']]
     }
     WatchCategory.change_notification_pref_for_group(groups_cats, :watching)
 
     groups_cats = {
-      'cyber-technologist' => ['internal-processes','networking-deployments']
+      'watch-gt' => ['test2']
     }
     WatchCategory.change_notification_pref_for_group(groups_cats, :tracking)
-    
+
     group_cats = {
-      'cyber-technologist' => ['eis-agn']
+      'watch-gt' => ['test3']
     }
     WatchCategory.change_notification_pref_for_group(groups_cats, :watching_first_post)
-    
+
   end
 
   def self.change_notification_pref_for_group(groups_cats, pref)
