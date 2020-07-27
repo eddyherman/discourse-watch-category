@@ -25,7 +25,7 @@ module ::WatchCategory
       'cybertechnician' => ['age', ['age', 'wiki'], ['internal', 'ctsad'] ]
     }
 
-    WatchCategory.change_notification_pref_for_group(groups_cats, :tracking)
+    WatchCategory.change_notification_pref_for_group(groups_cats, :watching_first_post)
 
 
   end
