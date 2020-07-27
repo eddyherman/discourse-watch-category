@@ -11,20 +11,22 @@ module ::WatchCategory
       # 'group' => ['category', 'another-top-level-category', ['parent-category', 'sub-category']],
       # 'everyone' makes every user watch the listed categories
       # 'everyone' => ['announcements']
-      'watch-gt' => ['gt-archive']
+      'Moderators' => ['helios']
 #      'digcol-cmte' => [['private', 'digital-collections-committee']]
     }
     WatchCategory.change_notification_pref_for_group(groups_cats, :watching)
 
+
+
+
+
+    #this is actually watching first post, not tracking
     groups_cats = {
-      'watch-gt' => ['test2']
+      'cybertechnician' => ['age', ['age', 'wiki'], ['internal', 'ctsad'] ]
     }
+
     WatchCategory.change_notification_pref_for_group(groups_cats, :tracking)
 
-    group_cats = {
-      'watch-gt' => ['test3']
-    }
-    WatchCategory.change_notification_pref_for_group(groups_cats, :watching_first_post)
 
   end
 
