@@ -11,7 +11,7 @@ module ::WatchCategory
       # 'group' => ['category', 'another-top-level-category', ['parent-category', 'sub-category']],
       # 'everyone' makes every user watch the listed categories
       # 'everyone' => ['announcements']
-      'watch-gt' => ['gt-achive',['test3','test2']]
+      'watch-gt' => ['gt-achive',['test3','test2'],'test3']
 
 #      'digcol-cmte' => [['private', 'digital-collections-committee']]
     }
