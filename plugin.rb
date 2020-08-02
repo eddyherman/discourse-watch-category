@@ -2,7 +2,7 @@
 # about: Watches a category for all the users in a particular group
 # version: 0.3
 # authors: Arpit Jalan
-# url: https://github.com/discourse/discourse-watch-category-mcneel
+  # url: https://github.com/discourse/discourse-watch-category-mcneel
 
 module ::WatchCategory
 
@@ -41,7 +41,10 @@ module ::WatchCategory
           else
             group.users.each do |user|
               watched_categories = CategoryUser.lookup(user, pref).pluck(:category_id)
-              CategoryUser.set_notification_level_for_category(user, CategoryUser.notification_levels[pref], category.id) unless watched_categories.include?(category.id)
+              muted_categories = CategoryUser.lookup(user, :muted).pluck(:category_id)
+              if not category.id.include?(muted_categories)
+                CategoryUser.set_notification_level_for_category(user, CategoryUser.notification_levels[pref], category.id) unless watched_categories.include?(category.id)
+              end
             end
           end
         end
@@ -51,6 +54,15 @@ module ::WatchCategory
   end
 
 end
+
+def self.remute(category_slug)
+   category = Category.find_by(slug: category_slug)
+   User.all.each do |user|
+     muted_categories = CategoryUser.lookup(user, :muted).pluck(:category_id)
+     CategoryUser.set_notification_level_for_category(user, CategoryUser.notification_levels[:muted], category.id) unless muted_categories.include?(category.id)  || user.staged
+   end
+ end
+
 
 after_initialize do
   module ::WatchCategory
