@@ -22,7 +22,7 @@ module ::WatchCategory
 
     #this is actually watching first post, not tracking
     groups_cats = {
-      'cybertechnician' => ['age', ['age', 'wiki'], ['internal', 'ctsad'] ]
+      'cybertechnician' => ['age', ['age', 'wiki'], ['internal', 'ctsad'],['internal','wiki'] ]
     }
 
     WatchCategory.change_notification_pref_for_group(groups_cats, :watching_first_post)
