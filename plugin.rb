@@ -46,12 +46,24 @@ module ::WatchCategory
           if group_name == 'everyone'
             User.all.each do |user|
               watched_categories = CategoryUser.lookup(user, pref).pluck(:category_id)
+              muted_categories = CategoryUser.lookup(user, :muted).pluck(:category_id)
+              watching_categories = CategoryUser.lookup(user, :watching).pluck(:category_id)
+              if not muted_categories.include?(category.id)
+                if not watching_categories.include?(category.id)
               CategoryUser.set_notification_level_for_category(user, CategoryUser.notification_levels[pref], category.id) unless watched_categories.include?(category.id)
+                end
+              end
             end
           else
             group.users.each do |user|
               watched_categories = CategoryUser.lookup(user, pref).pluck(:category_id)
+              muted_categories = CategoryUser.lookup(user, :muted).pluck(:category_id)
+              watching_categories = CategoryUser.lookup(user, :watching).pluck(:category_id)
+              if not muted_categories.include?(category.id)
+                if not watching_categories.include?(category.id)
               CategoryUser.set_notification_level_for_category(user, CategoryUser.notification_levels[pref], category.id) unless watched_categories.include?(category.id)
+                end
+              end
             end
           end
         end
