@@ -22,7 +22,7 @@ module ::WatchCategory
 
     #this is actually watching first post, not tracking
     groups_cats = {
-      'cybertechnician' => ['age', ['age', 'wiki'], 'eis', ['eis', 'wiki'], 'agn',['agn','wiki'],'saas',['saas','wiki'],'third-party', ['third-party','wiki'], 'iis',['iis','wiki'], ['internal','announcements'],['internal', 'ct-wiki'] ],
+      'cybertechnician' => ['age', ['age', 'wiki'], 'eis', ['eis', 'wiki'], 'agn',['agn','wiki'],'saas',['saas','wiki'],'third-party', ['third-party','wiki'], 'iis',['iis','wiki'], ['internal','announcements'],['internal', 'ct-wiki'], 'csensor',['csensor','wiki'] ],
       'customersuccess' => ['csm-ebr','csm-templates','csm-questions'],
       'everyone' => [['internal','announcements'],'helios']
     }
